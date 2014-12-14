@@ -7,7 +7,7 @@ album.
 
 Clicking the "Download" button will download high resolution versions
 of all the photos in the album. The photos are placed in the Chrome
-downloads directory, in a subdirectory named meetup_album_<photo_album_id>.
+downloads directory, in a subdirectory named meetup_album_[photo_album_id].
 
 Installing the Unpacked Extension
 -----
