@@ -1,0 +1,43 @@
+// Meetup Photo Album Download Chrome Extension
+// Copyright (c) 2014 https://github.com/workingtheories
+// All rights reserved.
+// Use of this source code is governed by a GNU GPL
+// license that can be found in the LICENSE file.
+
+{
+  "manifest_version": 2,
+
+  "name": "Meetup Photo Album Download",
+  "version": "1.0",
+  "description": "Adds a button to meetup.com photo album pages that allows you to batch download all the photos in the album.",
+  "incognito": "split",
+
+  "background" : {
+    "page": "eventpage.html",
+    "persistent": false
+  },
+
+  "permissions": [
+      "activeTab",
+      "downloads",
+      "storage",
+      "tabs",
+      "http://*.meetup.com/*",
+      "https://*.meetup.com/*"
+  ],
+
+  "content_scripts": [
+    {
+        "matches": ["*://*.meetup.com/*/photos/*"],
+        "js": ["photoalbumpage.js"],
+        "run_at": "document_idle"
+    },
+    {
+        "matches": ["*://example.com/meetup-photo-album-download/*"],
+        "js": ["redirectstatic.js"],
+        "run_at": "document_start"
+    }
+  ],
+
+  "web_accessible_resources": ["redirect.html"]
+}
