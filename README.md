@@ -28,7 +28,7 @@ the extension was coded to work with is deleted.
 - Click on "Create New Consumer".
 - Fill out the required fields, setting the "Redirect URI" to "https://example.com".
 - Click "Register Consumer".
-- Find the key for the new consumer. Edit OAUTH.consumer_key in constants.js to contain the new key.
+- Find the key for the new consumer. Edit OAUTH.consumerKey in constants.js to contain the new key.
 - Log out of meetup.com.
 - Open "chrome://extensions".
 - Reload the extension.
